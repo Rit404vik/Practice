@@ -22,10 +22,10 @@ public class FileSpeedComparison {
         }
     }
 
-    public static void compareWriteMethods(String filepath){
+    public static void compareWriteMethods(String filepath, String filepath2){
 
         long startTimeWithoutBuffer = System.nanoTime();
-        writeWithoutBuffer(filepath);
+        writeWithoutBuffer(filepath2);
         long endTimeWithoutBuffer = System.nanoTime();
         long durationBetweenWithoutBuffer = endTimeWithoutBuffer - startTimeWithoutBuffer;
         System.out.println("Time taken without buffering: " + durationBetweenWithoutBuffer + " nanoseconds");
@@ -48,8 +48,9 @@ public class FileSpeedComparison {
     public static void main(String[] args) {
 
         String filepath = "output.txt";
+        String filepath2 = "output_without_buff.txt";
 
-        compareWriteMethods(filepath);
+        compareWriteMethods(filepath, filepath2);
 
     }
 }
