@@ -4,7 +4,7 @@ public class FileSpeedComparison {
     public static void writeWithoutBuffer(String filepath){
         try (FileWriter writer = new FileWriter(filepath)){
             for(int i = 0; i<1000; i++){
-                writer.write("Line" + (i+1) + "Writing without Buffer\n");
+                writer.write("Line " + (i+1) + " Writing without Buffer\n");
             }
         } catch (IOException e){
             e.printStackTrace();
@@ -14,7 +14,7 @@ public class FileSpeedComparison {
     public static void writeWithBuffer(String filepath){
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(filepath))) {
             for (int i = 0; i<1000; i++){
-                writer.write("Line" + (i+1) + "Writing with Buffer");
+                writer.write("Line " + (i+1) + " Writing with Buffer");
                 writer.newLine();
             }
         } catch (IOException e){
