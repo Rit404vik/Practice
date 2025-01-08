@@ -44,6 +44,8 @@ public class FileSpeedComparison {
             System.out.println("Time without buffer is faster " + durationBetweenWithoutBuffer);
         }
 
+        System.out.println("Time difference in seconds : " + (float)(durationBetweenWithoutBuffer - durationBetweenWithBuffer)/1000000000 );
+
     }
     public static void main(String[] args) {
 
